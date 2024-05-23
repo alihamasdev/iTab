@@ -1,3 +1,62 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%23ffffff" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>');
+  background-size: 20px 20px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+@layer components {
+  .container-img {
+    @apply bg-img bg-cover bg-fixed bg-center bg-no-repeat;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .absolute-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .absolute-x-center {
+    @apply absolute left-1/2 -translate-x-1/2;
+  }
+  .absolute-y-center {
+    @apply absolute top-1/2 -translate-y-1/2;
+  }
+  .glassmorphism {
+    @apply border border-white/50 bg-white/35 backdrop-blur-sm;
+  }
+  .main-section {
+    @apply flex-center bg-black/30 relative size-full min-h-screen py-9;
+  }
+  .error-msg {
+    @apply absolute text-red-500 text-xs right-1 top-1.5 font-medium;
+  }
+  .shortcut {
+    @apply relative cursor-pointer rounded-md border-[1px] border-transparent hover:glassmorphism;
+  }
+  .shortcut-img{
+    @apply size-9 min-h-9 md:size-50 md:min-h-50 overflow-hidden rounded-full bg-white flex-center;
+  }
+  .shortcut-name{
+    @apply text-[10px] md:text-13 font-medium w-full truncate text-center mt-2;
+  }
+  .btn {
+    @apply hover:saturate-150 w-auto rounded-md border border-solid border-white bg-accent px-1 py-1.5 font-medium transition-all duration-300 saturate-100;
+  }
+  .input-field {
+    @apply w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm outline-0 focus:ring-0 focus:border-gray-300;
+  }
+}
+
+@layer base{
+  input{
+    @apply placeholder:text-white/60;
+  }
+}
