@@ -26,32 +26,32 @@ const Shortcut = () => {
     setOption(true);
   };
 
-  window.onclick = (e) => {
+  window.onclick = () => {
     setOption(false);
   };
 
   return (
     <>
       <section onContextMenu={handleContextMenu}
-        className="shortcut-container h-200 grid w-4/5 grid-cols-4 overflow-hidden md:w-1/3 md:grid-cols-5" >
+        className="grid grid-cols-4 md:grid-cols-5 w-4/5 md:w-1/3">
         {shortcuts.map((item) => {
           return (
             <div key={item.id} id={item.id}
               className={`shortcut ${option && "animate-wiggle"}`}
               onClick={(e) => {handleDelete(e, item.id)}} >
-              <a href={item.url} className="flex-center flex-col p-2">
+              <a href={item.url} className="flex-col flex-center p-2">
                 <div className="shortcut-img">
                   <img src={item.icon} className="size-3/5" />
                 </div>
                 <div className="shortcut-name">{item.name}</div>
               </a>
               <img src="https://cdn-icons-png.flaticon.com/128/1828/1828843.png"
-                className={`absolute -top-1 left-0 ${option ? "visible" : "invisible"}`} 
+                className={`absolute top-0 left-0 size-5 ${option ? "visible" : "invisible"}`} 
               />
             </div>
           );
         })}
-        <div className="shortcut flex-center flex-col p-2" onClick={() => setIsForm(true)}>
+        <div className="flex-col flex-center p-2 shortcut" onClick={() => setIsForm(true)}>
           <div className="shortcut-img">
             <img src="https://cdn-icons-png.flaticon.com/128/3524/3524388.png" className="size-2/5" />
           </div>
