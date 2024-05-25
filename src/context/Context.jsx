@@ -1,18 +1,23 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from 'react';
 
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
   const [isForm, setIsForm] = useState(false);
   const [shortcuts, setShortcuts] = useState([]);
-  const [name, setName] = useState('Ali Hamas');
+  const [name, setName] = useState(null);
   const [clockFormat, setClockFormat] = useState(12);
 
-  const contextValue = { isForm, setIsForm, shortcuts, setShortcuts, name, clockFormat };
+  useEffect(() => {
+    let savedName = localStorage.getItem('name');
+    if (savedName) {
+      setName(savedName);
+    }
+  }, []);
 
-  return (
-    <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
-  );
+  const contextValue = { isForm, setIsForm, shortcuts, setShortcuts, name, setName, clockFormat };
+
+  return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;
 };
 
 export default function useApp() {

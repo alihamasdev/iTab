@@ -1,22 +1,26 @@
-import { Clock, Search, Shortcut, ShortcutForm } from "./components";
-import useApp from "./context/Context";
+import { Clock, Search, Shortcut, ShortcutForm, Name } from './components';
+import useApp from './context/Context';
 
 function App() {
-  const { isForm } = useApp();
+  const { isForm, name } = useApp();
   return (
     <>
-      <main className={`${!isForm || "backdrop-blur-xl"} main-section`}>
-        <div className="flex-center relative size-full flex-col gap-5 py-8">
-          {!isForm ? (
-            <>
-              <Clock />
-              <Search />
-              <Shortcut />
-            </>
-          ) : (
-            <ShortcutForm />
-          )}
-        </div>
+      <main className={`flex-center bg-black/30 relative size-full min-h-dvh py-9 ${!isForm || 'backdrop-blur-xl'}`}>
+        {name ? (
+          <div className="relative flex-col flex-center gap-5 py-8 size-full">
+            {!isForm ? (
+              <>
+                <Clock />
+                <Search />
+                <Shortcut />
+              </>
+            ) : (
+              <ShortcutForm />
+            )}
+          </div>
+        ) : (
+          <Name />
+        )}
       </main>
     </>
   );
