@@ -13,12 +13,7 @@ Visit [itab-alihamas.vercel.app](https://itab-alihamas.vercel.app) for iTab demo
 - Integrates a Google search bar directly on the homepage, allowing for quick and easy web searches without needing to navigate to another page.
 - Offers a shortcut section where users can add and delete shortcuts to their favorite websites or web applications, enhancing productivity and convenience.
 
-## Technologies
-
-- React js
-- Tailwind css
-
-### Add Extension
+## Add Extension
 
 To use this as an extension in your chrome browser, follow these steps:
 
