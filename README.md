@@ -13,7 +13,7 @@ Visit [itab-alihamas.vercel.app](https://itab-alihamas.vercel.app) for iTab demo
 - Integrates a Google search bar directly on the homepage, allowing for quick and easy web searches without needing to navigate to another page.
 - Offers a shortcut section where users can add and delete shortcuts to their favorite websites or web applications, enhancing productivity and convenience.
 
-## Add Extension
+## Extension
 
 To use this as an extension in your chrome browser, follow these steps:
 
@@ -28,6 +28,8 @@ To use this as an extension in your chrome browser, follow these steps:
 5. Click the `Load Unpacked` button in the top left corner and select the etracted folder of `extension.zip`.
 
 6. Once the extension is uploaded successfully, it will appear in your list of extensions, and you are ready to go!.
+
+Watch [demo video](https://www.youtube.com/watch?v=DZfSLn86G7c&ab_channel=AliHamasGhurki) on youtube.
 
 ### Precautions
 
@@ -79,7 +81,7 @@ Feel free to modify and adapt it to your needs. If you have any suggestions for 
 Contributions are welcome! Feel free to open issues and pull requests to improve this project.
 
 1. Fork the repository.
-2. Create a new branch for your feature or bugfix: git checkout -b feature-name.
-3. Make your changes and commit them: git commit -m 'Add feature'.
-4. Push to the branch: git push origin feature-name.
+2. Create a new branch for your feature or bugfix: `git checkout -b branch-name`.
+3. Make your changes and commit them: `git commit -m 'message'`.
+4. Push to the branch: `git push origin branch-name`.
 5. Submit a pull request.
